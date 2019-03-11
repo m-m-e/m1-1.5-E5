@@ -1,0 +1,40 @@
+.page {
+    width: 500px;
+}
+
+.container {
+    position: absolute;
+    margin: 0;
+    width: 500px;
+    height: 500px;
+}
+
+.box {
+    box-sizing: border-box;
+    text-align: center;
+    position: absolute;
+}
+
+.div1 {
+    height: 500px;
+    width: 500px;
+    background: yellow;
+    padding: 40px;
+    border: 2px solid black;
+   
+}
+
+.div2 {
+    height: 300px;
+    width: 300px;
+    background: #008000;
+    padding: 75px;
+    
+}
+
+.div3 {
+    height: 150px;
+    width: 150px;
+    background: blue;
+    border: 20px dotted red;
+}
