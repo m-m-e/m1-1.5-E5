@@ -1,5 +1,16 @@
 .page {
-    width: 500px;
+    margin: 0;
+    /* width: 500px;*/
+    /*
+        Este alto no lo necesitas a no ser que quieras asegurarte que la página tiene al menos el alto del objeto mayor. En ese caso debería ser un min-height y ya que .container tiene posicionaminto absoluto y se sale del flujo, tb necesitaríamos un min-width.
+
+        Le voy a poner un alto y ancho mínimo de 600, para que siempre sobre espacio. Tb le voy a decir que intente ocupar todo el ancho y alto que pueda, pero al menos tiene que ocupar 600x600 si haces más pequeña la ventana verás que aparece scroll
+    */
+    width: 100vw;
+    height: 100vh;
+    min-width: 600px;
+    min-height: 600px;
+    position: relative;
 }
 
 .container {
@@ -7,6 +18,17 @@
     margin: 0;
     width: 500px;
     height: 500px;
+    /*
+        siempre que pongamos un elemento con posicionamiento absolute o fixed necesito ponerle coordenadas horizontales y laterales, por ejmplo left:0; top: 0;
+        Como lo queremos centrado en la pantalla vamos a usar un sistema que funciona muy bien: pongo un left:50%; top: 50%; esto hace que se coloque a partir del 50% horizontal de su contendor y del 50% vertical de su contenedor.
+        Y luego con transform, lo desplazo un 50% de le mismo hacia arriba y hacia la izquierda
+    */
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    /* El resto de elementos (.div2 y .div3) se centran con esas tres líneas de arriba */
+    /* Recuerda que como tienes la clase general .box puedes añadir esas tres líneas al selector .box y se aplica a todos los elementos ;)
+    */
 }
 
 .box {
@@ -29,7 +51,6 @@
     width: 300px;
     background: #008000;
     padding: 75px;
-    
 }
 
 .div3 {
